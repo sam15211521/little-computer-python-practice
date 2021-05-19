@@ -9,5 +9,3 @@ if username == "sam1521":
 else:
     print("invalad user name")
     
-user_password ="WCDIYD"
-user_name ="eede"
