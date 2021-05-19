@@ -8,14 +8,3 @@ if username == "sam1521":
         print ("invalad password")
 else:
     print("invalad user name")
-
-    
-
-
-
-question = input("are you there? y/n   ")
-if question == "y":
-    print ("hello")
-else:
-    print("goodbye")
-    
