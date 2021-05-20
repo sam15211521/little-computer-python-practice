@@ -37,8 +37,8 @@ elif  weight > 10:
 
 #comparison of prices
 if g_price < g_p_price and g_price < 125:
-    print("shipping by ground is cheepest")
+    print("Shipping by ground is cheepest")
 elif g_p_price < g_price and g_p_price < 125:
-    print("shipping by drone is cheepest")
+    print("Shipping by drone is cheepest")
 else:
-    print("shipping by ground premium is cheepest")
+    print("Shipping by ground premium is cheepest")
