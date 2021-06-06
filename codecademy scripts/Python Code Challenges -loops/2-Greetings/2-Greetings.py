@@ -3,7 +3,7 @@
 def add_greetings(names):
     greeting =[]
     for name in names:
-        a = "Hello " + name
+        a = "Hello, " + name
         greeting.append(a)
     return greeting
   #funciong below returns every letter in its own area of a list  
