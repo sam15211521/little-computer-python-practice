@@ -11,6 +11,7 @@ def odd_indices(lst):
             i +=1
     return lst2
 
+#here is the other version, using ranges instead of an index variable... need to remember to use ranges.
 def odd_indices2(lst):
     lst2 =[]
     for i in range(1, len(lst),2):
