@@ -21,3 +21,11 @@ for player, words in player_to_words.items():
     player_points += score_word(word)
   player_to_points[player] =player_points
 print(player_to_points)
+
+
+
+#If you want extended practice, try to implement some of these ideas with the Python you’ve learned:
+
+#play_word() — a function that would take in a player and a word, and add that word to the list of words they’ve played
+#update_point_totals() — turn your nested loops into a function that you can call any time a word is played
+#make your letter_to_points dictionary able to handle lowercase inputs as well
