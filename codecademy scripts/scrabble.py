@@ -4,28 +4,48 @@ points = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 4, 1, 3, 10, 1, 1, 1, 1, 4, 4, 
 letters_to_points = {letter: point for letter, point in zip(letters, points)}
 
 letters_to_points[" "] = 0
-#print(letters_to_points) 
+#print(letters_to_points)
+
+#function socres a word
 def score_word(word):
   point_total = 0
   for letter in word.upper():
     point = letters_to_points.get(letter, 0)
     point_total += point
   return point_total
-print(score_word("BROWNIE"))
 
+#these are the players and their words
 PtW = player_to_words = {'player1' : ['BLUE', 'TENNIS', 'EXIT'], 'wordNerd': ['EARTH', 'EYES', 'MACHINE'], 'Lexi Con': ['eraser', 'belly', 'husky'], 'Prof Reader': ['zap', 'coma', 'period']}
-player_to_points = {}
-for player, words in player_to_words.items():
-  player_points = 0
-  for word in words:
-    player_points += score_word(word)
-  player_to_points[player] =player_points
-print(player_to_points)
 
+#function finds the current point value of all the players
+def points_of_player():
+    player_to_points = {}
+    for player, words in player_to_words.items():
+      player_points = 0
+      for word in words:
+        player_points += score_word(word)
+      player_to_points[player] =player_points
+    print(player_to_points)
+    
+#function adds a new word to a player's score
+    # works on the global part
+newPtW = {}
+def play_word(player, word):
+    old = PtW[player] #temp value
+    old.append(word)
+    PtW[player] = old #updates PtW
+    print (PtW)       #prints new word values for all
+    print () 
+    points_of_player() #calls PoP to pring current 
+    
+    
+    
+    
+    
+#here is the playing of the code 
+play_word('player1', 'sam')
+print('###')
+play_word('wordNerd', 'hello')
 
-
-#If you want extended practice, try to implement some of these ideas with the Python you’ve learned:
-
-#play_word() — a function that would take in a player and a word, and add that word to the list of words they’ve played
-#update_point_totals() — turn your nested loops into a function that you can call any time a word is played
-#make your letter_to_points dictionary able to handle lowercase inputs as well
+#points_of_player()
+    
