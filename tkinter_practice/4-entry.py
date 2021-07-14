@@ -12,8 +12,8 @@ def clicking():
     myLable =Label(root, text =hello)
     myLable.pack()
 
-myButton = Button(root, text ="Enter Your Name", padx =50, pady=50, command = clicking, fg = 'blue', bg ='#000000') 
-            #Button(where, text, size in x axis, size in y axis,    command signals what will run, fg changes the color of the text, bg changes the background color)
+myButton = Button(root, text ="Enter Your Name", padx =50, pady=50, command = clicking, fg = 'blue', bg ='#000000', wraplength = 2) 
+            #Button(where, text =, size in x axis, size in y axis,    command signals what will run, fg changes the color of the text, bg changes the background color)
 myButton.pack()
 
 
