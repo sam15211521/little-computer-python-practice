@@ -43,7 +43,7 @@ class WalkBot(Robot):
        self.obstacle_found = False
        self.step_length = 5
     
-
+############
    # Override the avoid_obstacles method here!
     def avoid_obstacles(self):
             if self.obstacle_found:
@@ -54,7 +54,8 @@ class WalkBot(Robot):
                     self.obstacle_found = False
             self.speed /= 2
             self.step_length /=2
-
+#########
+########
 
 robot_1 = WalkBot(150, 0, 10, 10)
 robot_1.obstacle_found = True
