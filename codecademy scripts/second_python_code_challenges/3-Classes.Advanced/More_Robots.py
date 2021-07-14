@@ -24,17 +24,30 @@ class Robot:
             self.direction = (self.direction + 180) % 360
             self.obstacle_found = False
 
+
 # Create the DriveBot class here!
+class DriveBot(Robot):
+    def __init__(self, motor_speed =0, direction = 180, sensor_range = 10): #.motor speed replaces .speed from parent
+        super().__init__(motor_speed, direction, sensor_range)
+
+
 
 # Create the WalkBot class here!
+class WalkBot(Robot):
+
+    def __init__(self, steps_per_minute =0, direction =180, sensor_range = 10, step_length = 5):
+        super().__init__(steps_per_minute, direction, sensor_range)
+        self.step_length = step_length
+    
+
 
 # Uncomment the robot instantiation!
-# robot_1 = DriveBot()
-# robot_2 = WalkBot()
-# robot_3 = WalkBot(20, 90, 15, 10)
+robot_1 = DriveBot()
+robot_2 = WalkBot()
+robot_3 = WalkBot(20, 90, 15, 10)
 
 # Use these print statements to test your code!
 
-# print(robot_2.id)
-# print(robot_3.step_length)
-# print(robot_1.speed)
+print(robot_2.id)
+print(robot_3.step_length)
+print(robot_1.speed, robot_1.id)
