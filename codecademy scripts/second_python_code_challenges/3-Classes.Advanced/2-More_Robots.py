@@ -25,29 +25,34 @@ class Robot:
             self.obstacle_found = False
 
 
-# Create the DriveBot class here!
 class DriveBot(Robot):
-    def __init__(self, motor_speed =0, direction = 180, sensor_range = 10): #.motor speed replaces .speed from parent
+
+    def __init__(self, motor_speed = 0, direction = 180, sensor_range = 10):
         super().__init__(motor_speed, direction, sensor_range)
 
 
-
-# Create the WalkBot class here!
 class WalkBot(Robot):
 
-    def __init__(self, steps_per_minute =0, direction =180, sensor_range = 10, step_length = 5):
+    def __init__(self, steps_per_minute = 0, direction = 180, sensor_range = 10, step_length = 5):
         super().__init__(steps_per_minute, direction, sensor_range)
         self.step_length = step_length
-    
+
+    # Override the adjust_sensor method here!
+    def adjust_sensor(self, new_sensor_range):
+        super().adjust_sensor(new_sensor_range)
+        self.obstacle_found = False
+        self.step_length = 5
 
 
-# Uncomment the robot instantiation!
-robot_1 = DriveBot()
-robot_2 = WalkBot()
-robot_3 = WalkBot(20, 90, 15, 10)
+robot_walk = WalkBot(60, 90, 10, 15)
+robot_walk.obstacle_found = True
+print(robot_walk.sensor_range)
+print(robot_walk.obstacle_found)
+print(robot_walk.step_length)
+# Call the overridden adjust_sensor method here!
 
-# Use these print statements to test your code!
+robot_walk.adjust_sensor(5)
 
-print(robot_2.id)
-print(robot_3.step_length)
-print(robot_1.speed, robot_1.id)
+print(robot_walk.sensor_range)
+print(robot_walk.obstacle_found)
+print(robot_walk.step_length)
